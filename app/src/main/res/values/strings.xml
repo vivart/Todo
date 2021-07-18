@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Todo</string>
+    <string name="msg_empty">placeholder text</string>
+    <string name="msg_empty_filtered">Click the + icon to add a todo item, or change your filter to show other items.</string>
+    <string name="menu_about">About</string>
+    <string name="is_completed">Item is completed</string>
+    <string name="created_on">Created on</string>
+    <string name="menu_edit">Edit</string>
+    <string name="description">Description</string>
+    <string name="notes">Notes</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_add">Add</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_filter">Filter</string>
+    <string name="menu_filter_all">All</string>
+    <string name="menu_filter_completed">Completed</string>
+    <string name="menu_filter_outstanding">Outstanding</string>
+    <string name="report_template">
+        <![CDATA[
+        <h1>To-Do Items</h1>
+        {{#this}}
+            <h2>{{description}}</h2>
+            <p>{{#completed}}<b>COMPLETED</b> &mdash; {{/completed}}Created on: {{dateFormat createdOn}}</p>
+            <p>{{notes}}</p>
+        {{/this}}
+        ]]>
+    </string>
+    <string name="oops">Sorry! Something went wrong!</string>
+    <string name="menu_share">Share</string>
+    <string name="pref_url_title">Web service URL</string>
+    <string name="web_service_url_key">webServiceUrl</string>
+    <string name="web_service_url_default">https://api.npoint.io/080fa016b3e55e91e212/</string>
+    <string name="settings">Settings</string>
+    <string name="menu_import">Import</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="import_error_title">Import Failure</string>
+    <string name="import_error_message">Something went wrong with the import!</string>
+    <string name="pref_import_title">Import periodically</string>
+    <string name="import_key">doPeriodicImport</string>
+</resources>
