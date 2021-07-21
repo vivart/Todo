@@ -11,7 +11,7 @@ import com.example.todo.BuildConfig
 import com.example.todo.di.AppScope
 import com.example.todo.repo.FilterMode
 import com.example.todo.repo.FilterMode.ALL
-import com.example.todo.repo.PrefsRepository
+import com.example.settings.PrefsRepository
 import com.example.todo.repo.TodoModel
 import com.example.todo.repo.TodoRepository
 import com.example.todo.report.RosterReport

@@ -8,9 +8,9 @@ import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.NetworkType
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
+import com.example.settings.PrefsRepository
 import com.example.todo.di.AppScope
 import com.example.todo.repo.ImportWorker
-import com.example.todo.repo.PrefsRepository
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.collect

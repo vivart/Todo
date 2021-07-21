@@ -47,7 +47,7 @@ android {
 dependencies {
 
     implementation project(":about")
-    implementation project(":lib")
+    implementation project(":settings")
 
     //Constraint layout
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
@@ -75,9 +75,6 @@ dependencies {
 
     // HandleBar
     implementation "com.github.jknack:handlebars:4.1.2"
-
-    //Preferences
-    implementation "androidx.preference:preference-ktx:1.1.1"
 
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:2.9.0"

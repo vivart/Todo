@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/prefsFragment"
-        android:name="com.example.todo.prefs.PrefsFragment"
+        android:name="com.example.settings.PrefsFragment"
         android:label="@string/settings" />
     <action android:id="@+id/editPrefs" app:destination="@id/prefsFragment" />
     <dialog
