@@ -46,6 +46,7 @@ android {
 
 dependencies {
 
+    implementation project(":about")
     implementation project(":lib")
 
     //Constraint layout

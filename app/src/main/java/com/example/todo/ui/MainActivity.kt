@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.about.AboutActivity
 import com.example.todo.R
 import com.example.todo.R.id
 import com.example.todo.databinding.ActivityMainBinding
