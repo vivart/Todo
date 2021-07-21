@@ -10,11 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 29
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
         testInstrumentationRunnerArguments["androidx.benchmark.suppressErrors"] = "DEBUGGABLE"
     }
 
@@ -33,7 +30,7 @@ android {
         jvmTarget = '1.8'
     }
     targetProjectPath = ":app" // Note that your module name may be different
-    experimentalProperties["android.experimental.self-instrumenting"] = true
+//    experimentalProperties["android.experimental.self-instrumenting"] = true
 }
 
 androidComponents {

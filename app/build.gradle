@@ -46,6 +46,8 @@ android {
 
 dependencies {
 
+    implementation project(":lib")
+
     //Constraint layout
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
