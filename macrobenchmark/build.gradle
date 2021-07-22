@@ -30,7 +30,7 @@ android {
         jvmTarget = '1.8'
     }
     targetProjectPath = ":app" // Note that your module name may be different
-//    experimentalProperties["android.experimental.self-instrumenting"] = true
+    experimentalProperties["android.experimental.self-instrumenting"] = true
 }
 
 androidComponents {
@@ -42,14 +42,14 @@ androidComponents {
 }
 
 dependencies {
-
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.6.0'
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'junit:junit:4.13.2'
-    implementation 'androidx.test.ext:junit:1.1.3'
-    implementation 'androidx.test.espresso:espresso-core:3.4.0'
-    implementation 'androidx.benchmark:benchmark-macro-junit4:1.1.0-alpha03'
-    implementation 'androidx.benchmark:benchmark-macro:1.1.0-alpha03'
+    implementation project(":depconstraints")
+    implementation Libs.KOTLIN_STDLIB
+    implementation Libs.CORE_KTX
+    implementation Libs.APPCOMPAT
+    implementation Libs.MATERIAL
+    implementation Libs.JUNIT
+    implementation Libs.JUNIT_EXT
+    implementation Libs.ESPRESSO
+    implementation Libs.BENCHMARK_MACRO_JUNIT
+    implementation Libs.BENCHMARK_MACRO
 }

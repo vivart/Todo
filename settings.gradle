@@ -1,7 +1,0 @@
-rootProject.name = "Todo"
-include ':app'
-include ':macrobenchmark'
-include ':benchmark'
-include ':lib'
-include ':about'
-include ':settings'

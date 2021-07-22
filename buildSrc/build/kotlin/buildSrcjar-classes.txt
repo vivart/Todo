@@ -1,0 +1,1 @@
+/Users/vivart/Documents/develop/android/todo/buildSrc/build/classes/kotlin/main/Libs.class:/Users/vivart/Documents/develop/android/todo/buildSrc/build/classes/kotlin/main/Versions.class
