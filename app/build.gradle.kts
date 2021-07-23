@@ -8,12 +8,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Versions.COMPILE_SDK)
+    compileSdk = Versions.COMPILE_SDK
 
     defaultConfig {
         applicationId = "com.example.todo"
-        minSdkVersion(Versions.MIN_SDK)
-        targetSdkVersion(Versions.TARGET_SDK)
+        minSdk = Versions.MIN_SDK
+        targetSdk = Versions.TARGET_SDK
         versionCode = Versions.versionCodeMobile
         versionName = Versions.versionName
 
@@ -41,7 +41,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        val options = this as org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
+        val options = this
         options.jvmTarget = "1.8"
     }
     packagingOptions {
