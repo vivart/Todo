@@ -52,14 +52,17 @@ object AppModule {
     @Singleton
     @Provides
     fun providesHandleBars(@ApplicationContext context: Context): Handlebars = Handlebars().apply {
-        registerHelper("dateFormat", Helper<Instant> { value, _ ->
-            DateUtils.getRelativeDateTimeString(
-                context,
-                value.toEpochMilli(),
-                DateUtils.MINUTE_IN_MILLIS,
-                DateUtils.WEEK_IN_MILLIS, 0
-            )
-        })
+        registerHelper(
+            "dateFormat",
+            Helper<Instant> { value, _ ->
+                DateUtils.getRelativeDateTimeString(
+                    context,
+                    value.toEpochMilli(),
+                    DateUtils.MINUTE_IN_MILLIS,
+                    DateUtils.WEEK_IN_MILLIS, 0
+                )
+            }
+        )
     }
 
     @Singleton

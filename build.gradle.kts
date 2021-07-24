@@ -15,6 +15,10 @@ buildscript {
     }
 }
 
+plugins {
+    id("com.diffplug.gradle.spotless") version "3.27.1"
+}
+
 allprojects {
     repositories {
         google()
@@ -22,6 +26,23 @@ allprojects {
     }
 }
 
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
+subprojects {
+    apply(plugin = "com.diffplug.gradle.spotless")
+    val ktlintVer = "0.40.0"
+    spotless {
+        kotlin {
+            target("**/*.kt")
+            ktlint(ktlintVer)
+        }
+        kotlinGradle {
+            target("**/*.gradle.kts")
+            ktlint(ktlintVer)
+        }
+    }
+
+    tasks.whenTaskAdded {
+        if (name == "preBuild") {
+            mustRunAfter("spotlessCheck")
+        }
+    }
 }

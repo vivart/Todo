@@ -7,11 +7,11 @@ import androidx.core.content.FileProvider
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.settings.PrefsRepository
 import com.example.todo.BuildConfig
 import com.example.todo.di.AppScope
 import com.example.todo.repo.FilterMode
 import com.example.todo.repo.FilterMode.ALL
-import com.example.settings.PrefsRepository
 import com.example.todo.repo.TodoModel
 import com.example.todo.repo.TodoRepository
 import com.example.todo.report.RosterReport

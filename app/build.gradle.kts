@@ -86,7 +86,7 @@ dependencies {
     implementation(Libs.APPCOMPAT)
     implementation(Libs.MATERIAL)
 
-    //Testing
+    // Testing
     testImplementation(Libs.JUNIT)
     testImplementation(Libs.CORE_TESTING)
     testImplementation(Libs.MOCKK)

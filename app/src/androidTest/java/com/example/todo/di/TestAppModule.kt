@@ -31,11 +31,14 @@ object TestAppModule {
     @Singleton
     @Provides
     fun providesTodoRepository(store: Store, @AppScope coroutineScope: CoroutineScope) =
-        TodoRepository(store, coroutineScope, TodoRemoteDataSource(object : TodoService {
-            override suspend fun listTodoItems(url: String): List<TodoItem> {
-                return emptyList()
-            }
-        }))
+        TodoRepository(
+            store, coroutineScope,
+            TodoRemoteDataSource(object : TodoService {
+                override suspend fun listTodoItems(url: String): List<TodoItem> {
+                    return emptyList()
+                }
+            })
+        )
 
     @Singleton
     @Provides
@@ -53,13 +56,16 @@ object TestAppModule {
     @Singleton
     @Provides
     fun providesHandleBars(@ApplicationContext context: Context): Handlebars = Handlebars().apply {
-        registerHelper("dateFormat", Helper<Instant> { value, _ ->
-            DateUtils.getRelativeDateTimeString(
-                context,
-                value.toEpochMilli(),
-                DateUtils.MINUTE_IN_MILLIS,
-                DateUtils.WEEK_IN_MILLIS, 0
-            )
-        })
+        registerHelper(
+            "dateFormat",
+            Helper<Instant> { value, _ ->
+                DateUtils.getRelativeDateTimeString(
+                    context,
+                    value.toEpochMilli(),
+                    DateUtils.MINUTE_IN_MILLIS,
+                    DateUtils.WEEK_IN_MILLIS, 0
+                )
+            }
+        )
     }
 }

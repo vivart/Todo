@@ -32,7 +32,7 @@ class RosterAdapter(
             oldItem.id == newItem.id
 
         override fun areContentsTheSame(oldItem: TodoModel, newItem: TodoModel) =
-            oldItem.isCompleted == newItem.isCompleted
-                && oldItem.description == oldItem.description
+            oldItem.isCompleted == newItem.isCompleted &&
+                oldItem.description == oldItem.description
     }
 }

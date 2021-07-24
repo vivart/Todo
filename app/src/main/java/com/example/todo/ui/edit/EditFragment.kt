@@ -76,7 +76,6 @@ class EditFragment : Fragment() {
                             notes.setText(it.notes)
                         }
                     }
-
                 }
             }
         }

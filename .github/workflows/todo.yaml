@@ -23,7 +23,7 @@ jobs:
           java-version: 11
 
       - name: Build project
-        run: ./gradlew assembleDebug --stacktrace
+        run: ./gradlew spotlessCheck assembleDebug --stacktrace
 
       - name: Upload build reports
         if: always()

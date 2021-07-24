@@ -39,14 +39,14 @@ dependencies {
     kapt(platform(project(":depconstraints")))
     androidTestApi(platform(project(":depconstraints")))
 
-    //Preferences
+    // Preferences
     implementation(Libs.PREFERENCE)
 
-    //Hilt
+    // Hilt
     implementation(Libs.HILT_ANDROID)
     kapt(Libs.HILT_COMPILER)
 
-    //Coroutine helper
+    // Coroutine helper
     implementation(Libs.LIFECYCLE_VIEW_MODEL_KTX)
     implementation(Libs.LIFECYCLE_LIVE_DATA_KTX)
     implementation(Libs.LIFECYCLE_RUNTIME_KTX)
