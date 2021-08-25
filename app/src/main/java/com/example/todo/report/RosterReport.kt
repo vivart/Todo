@@ -13,9 +13,9 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class RosterReport @Inject constructor(
-    @ApplicationContext val context: Context,
+    @ApplicationContext private val context: Context,
     engine: Handlebars,
-    @AppScope val appScope: CoroutineScope
+    @AppScope private val appScope: CoroutineScope
 ) {
     private val template = engine.compileInline(context.getString(R.string.report_template))
 

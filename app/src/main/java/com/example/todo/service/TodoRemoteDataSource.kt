@@ -4,7 +4,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class TodoRemoteDataSource @Inject constructor(val service: TodoService) {
+class TodoRemoteDataSource @Inject constructor(private val service: TodoService) {
     suspend fun load(url: String) = withContext(Dispatchers.IO) {
         service.listTodoItems(url)
     }

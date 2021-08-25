@@ -16,9 +16,9 @@ enum class FilterMode { ALL, OUTSTANDING, COMPLETED }
 
 @Singleton
 class TodoRepository @Inject constructor(
-    val store: Store,
-    val appScope: CoroutineScope,
-    val remoteDataSource: TodoRemoteDataSource
+    private val store: Store,
+    private val appScope: CoroutineScope,
+    private val remoteDataSource: TodoRemoteDataSource
 ) {
     fun items(filterMode: FilterMode = ALL): Flow<List<TodoModel>> =
         filteredEntities(filterMode).map { all -> all.map { it.toModel() } }
