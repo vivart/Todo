@@ -41,9 +41,9 @@ class RosterViewModel @Inject constructor(
     private val repository: TodoRepository,
     private val report: RosterReport,
     @AppScope val appScope: CoroutineScope,
-    @ApplicationContext val context: Context,
+    @ApplicationContext private val context: Context,
     private val prefsRepository: PrefsRepository,
-    val savedStateHandle: SavedStateHandle
+    private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
     private val _states = MutableStateFlow(RosterViewState())

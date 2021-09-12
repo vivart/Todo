@@ -35,8 +35,8 @@ android {
 }
 
 dependencies {
-    api(platform(project(":depconstraints")))
-    androidTestApi(platform(project(":depconstraints")))
+    api(platform(projects.depconstraints))
+    androidTestApi(platform(projects.depconstraints))
 
     implementation(Libs.KOTLIN_STDLIB)
     implementation(Libs.CORE_KTX)

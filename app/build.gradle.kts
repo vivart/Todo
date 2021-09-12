@@ -56,11 +56,11 @@ android {
 }
 
 dependencies {
-    api(platform(project(":depconstraints")))
-    kapt(platform(project(":depconstraints")))
-    androidTestApi(platform(project(":depconstraints")))
-    implementation(project(":about"))
-    implementation(project(":settings"))
+    api(platform(projects.depconstraints))
+    kapt(platform(projects.depconstraints))
+    androidTestApi(platform(projects.depconstraints))
+    implementation(projects.about)
+    implementation(projects.settings)
     implementation(Libs.CONSTRAINT_LAYOUT)
     implementation(Libs.RECYCLER_VIEW)
     implementation(Libs.HILT_ANDROID)

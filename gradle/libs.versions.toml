@@ -1,0 +1,71 @@
+[versions]
+kotlin = "1.5.30"
+coreKtx = "1.6.0"
+appcompat = "1.3.1"
+material = "1.4.0"
+junit = "4.13.2"
+junitExt = "1.1.3"
+espresso = "3.4.0"
+constraintLayout = "2.1.0"
+recyclerView = "1.2.1"
+hilt = "2.38.1"
+navigation = "2.4.0-alpha06"
+room = "2.3.0"
+lifecycle = "2.4.0-alpha03"
+handleBars = "4.2.0"
+retrofit = "2.9.0"
+work = "2.6.0"
+workHilt = "1.0.0"
+coreTesting = "2.1.0"
+mockk = "1.12.0"
+coroutineTest = "1.5.2"
+testRunner = "1.4.0"
+benchmark = "1.0.0"
+benchmarkMacro = "1.1.0-alpha07"
+preference = "1.1.1"
+
+[libraries]
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+junit4 = { module = "junit:junit", version.ref = "junit" }
+junit-ext = { module = "androidx.test.ext:junit", version.ref = "junitExt" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintLayout" }
+recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerView" }
+hilt-androidx = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+hilt-android-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
+navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
+lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+handlebars = { module = "com.github.jknack:handlebars", version.ref = "handleBars" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "work" }
+hilt-work = { module = "androidx.hilt:hilt-work", version.ref = "workHilt" }
+androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "workHilt" }
+core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutineTest" }
+runner = { module = "androidx.test:runner", version.ref = "testRunner" }
+benchmark-junit4 = { module = "androidx.benchmark:benchmark-junit4", version.ref = "benchmark" }
+benchmark-macrox = { module = "androidx.benchmark:benchmark-macro", version.ref = "benchmarkMacro" }
+benchmark-macro-junit4 = { module = "androidx.benchmark:benchmark-macro-junit4", version.ref = "benchmarkMacro" }
+preference-ktx = { module = "androidx.preference:preference-ktx", version.ref = "preference" }
+
+[bundles]
+hilts = ["hilt-androidx", "hilt-compiler", "hilt-android-compiler", "hilt-android-testing", "hilt-work", "androidx-hilt-compiler"]
+benchmarks = ["benchmark-junit4", "benchmark-macrox", "benchmark-macro-junit4"]
+lifecycles = ["lifecycle-livedata-ktx", "lifecycle-runtime-ktx", "lifecycle-viewmodel-ktx"]
+tests = ["junit4", "junit-ext", "espresso-core", "core-testing", "mockk", "runner", "kotlinx-coroutines-test"]
+room = ["room-compiler", "room-ktx", "room-runtime"]
+navigation = ["navigation-fragment-ktx", "navigation-ui-ktx"]
+retrofits = ["retrofit", "converter-gson"]

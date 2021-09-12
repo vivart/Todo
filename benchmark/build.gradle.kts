@@ -39,8 +39,8 @@ android {
 }
 
 dependencies {
-    androidTestImplementation(platform(project(":depconstraints")))
-    androidTestImplementation(platform(project(":lib")))
+    androidTestImplementation(platform(projects.depconstraints))
+    androidTestImplementation(platform(projects.lib))
     androidTestImplementation(Libs.TEST_RUNNER)
     androidTestImplementation(Libs.JUNIT_EXT)
     androidTestImplementation(Libs.JUNIT)
