@@ -20,3 +20,11 @@ This repo has features like
 7. Retrofit with gson
 8. Room
 9. WorkManager
+
+Added support for VERSION_CATALOGS and TYPESAFE_PROJECT_ACCESSORS
+> A version catalog is a list of dependencies, represented as dependency coordinates, that a user can pick from when declaring dependencies in a build script.
+For example, instead of declaring a dependency using a string notation, the dependency coordinates can be picked from a version catalog:
+https://docs.gradle.org/current/userguide/platforms.html
+
+> Since Gradle 7, Gradle offers an experimental type-safe API for project dependencies.
+https://docs.gradle.org/7.0/userguide/declaring_dependencies.html#sec:type-safe-project-accessors
