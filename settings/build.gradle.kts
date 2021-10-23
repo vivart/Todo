@@ -61,7 +61,7 @@ dependencies {
 }
 tasks.withType<Test> {
     extensions.configure(kotlinx.kover.api.KoverTaskExtension::class) {
-        generateXml = false
+        generateXml = true
         generateHtml = true
         coverageEngine = kotlinx.kover.api.CoverageEngine.INTELLIJ
         includes = listOf("com\\.example\\..*")
