@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.channelFlow
 import kotlinx.coroutines.withContext
@@ -22,6 +23,7 @@ class PrefsRepository @Inject constructor(@ApplicationContext context: Context) 
         prefs.getString(webServiceUrlKey, defaultWebServiceUrl) ?: defaultWebServiceUrl
     }
 
+    @ExperimentalCoroutinesApi
     fun observeImportChanges() = channelFlow {
         val listener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
             if (importKey == key) {

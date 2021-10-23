@@ -5,7 +5,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.0.2")
+        classpath("com.android.tools.build:gradle:7.0.3")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.KOTLIN}")
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.NAVIGATION}")
         classpath("com.google.dagger:hilt-android-gradle-plugin:${Versions.HILT}")
@@ -17,6 +17,7 @@ buildscript {
 
 plugins {
     id("com.diffplug.gradle.spotless") version "3.27.1"
+    id("org.jetbrains.kotlinx.kover") version "0.3.0"
 }
 
 allprojects {
@@ -28,6 +29,7 @@ allprojects {
 
 subprojects {
     apply(plugin = "com.diffplug.gradle.spotless")
+    apply(plugin = "kover")
     val ktlintVer = "0.40.0"
     spotless {
         kotlin {

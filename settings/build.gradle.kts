@@ -59,3 +59,12 @@ dependencies {
     androidTestImplementation(Libs.JUNIT_EXT)
     androidTestImplementation(Libs.ESPRESSO)
 }
+tasks.withType<Test> {
+    extensions.configure(kotlinx.kover.api.KoverTaskExtension::class) {
+        generateXml = false
+        generateHtml = true
+        coverageEngine = kotlinx.kover.api.CoverageEngine.INTELLIJ
+        includes = listOf("com\\.example\\..*")
+        excludes = listOf("dagger\\.hilt\\..*")
+    }
+}

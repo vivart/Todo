@@ -105,3 +105,17 @@ dependencies {
     androidTestImplementation(Libs.HILT_ANDROID_TESTING)
     kaptAndroidTest(Libs.HILT_ANDROID_COMPILER)
 }
+tasks.withType<Test> {
+    extensions.configure(kotlinx.kover.api.KoverTaskExtension::class) {
+        generateXml = false
+        generateHtml = true
+        coverageEngine = kotlinx.kover.api.CoverageEngine.INTELLIJ
+        includes = listOf("com\\.example\\..*")
+        excludes = listOf(
+            "dagger\\.hilt\\..*",
+            "com\\.example\\.todo\\.databinding\\..*",
+            "com\\.example\\.todo\\.di\\..*",
+            "com\\.example\\.settings\\..*",
+        )
+    }
+}
