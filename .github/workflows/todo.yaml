@@ -25,6 +25,9 @@ jobs:
       - name: Build project
         run: ./gradlew check spotlessCheck assembleDebug --stacktrace
 
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+
       - name: Upload build reports
         if: always()
         uses: actions/upload-artifact@v2
