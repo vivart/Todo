@@ -25,18 +25,6 @@ jobs:
       - name: Build project
         run: ./gradlew spotlessCheck assembleDebug --stacktrace
 
-      - name: Qodana - Code Inspection
-        uses: JetBrains/qodana-action@v3.2.1
-
-      - name: Upload qodana report
-        uses: actions/upload-artifact@v2
-        with:
-          path: ${{ github.workspace }}/qodana
-
-      - name: See qodana result
-        run: |
-          ls ${{ github.workspace }}/qodana
-
       - name: Upload build reports
         if: always()
         uses: actions/upload-artifact@v2

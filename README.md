@@ -21,7 +21,6 @@ This repo has features like
 8. Room
 9. WorkManager
 10. Add [Kover - Gradle plugin for Kotlin code coverage](https://github.com/Kotlin/kotlinx-kover).
-11. Add [Qodana](https://www.jetbrains.com/help/qodana/getting-started.html) - Qodana is a code quality monitoring tool that identifies and suggests fixes for bugs, security vulnerabilities, duplications, and imperfections.
 
 Added support for VERSION_CATALOGS and TYPESAFE_PROJECT_ACCESSORS
 > A version catalog is a list of dependencies, represented as dependency coordinates, that a user can pick from when declaring dependencies in a build script.
