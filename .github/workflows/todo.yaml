@@ -27,6 +27,8 @@ jobs:
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2
+        with:
+          files: ./app/build/reports/kover/testDebugUnitTest.xml
 
       - name: Upload build reports
         if: always()
