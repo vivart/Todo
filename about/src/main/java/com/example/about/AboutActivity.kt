@@ -29,7 +29,8 @@ fun AboutScreen() {
             WebView(it).apply {
                 loadUrl("file:///android_asset/about.html")
             }
-        }, modifier = Modifier
+        },
+        modifier = Modifier
             .testTag("web")
             .fillMaxHeight()
     )
