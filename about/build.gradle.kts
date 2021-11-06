@@ -24,6 +24,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        compose = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -31,6 +32,12 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.1.0-alpha06"
+    }
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
     }
 }
 
@@ -42,7 +49,13 @@ dependencies {
     implementation(Libs.CORE_KTX)
     implementation(Libs.APPCOMPAT)
     implementation(Libs.MATERIAL)
+    implementation(Libs.COMPOSE_MATERIAL)
+    implementation(Libs.COMPOSE_ACTIVITY)
+    implementation(Libs.COMPOSE_UI)
+    implementation(Libs.COMPOSE_UI_TOOLKIT)
+    implementation(Libs.COMPOSE_UI_MATERIAL)
     testImplementation(Libs.JUNIT)
     androidTestImplementation(Libs.JUNIT_EXT)
     androidTestImplementation(Libs.ESPRESSO)
+    androidTestImplementation(Libs.COMPOSE_TEST)
 }

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.about">
 
-    <application>
+    <application android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
         <activity android:name=".AboutActivity" />
     </application>
 </manifest>

@@ -23,6 +23,8 @@ testRunner = "1.4.0"
 benchmark = "1.0.0"
 benchmarkMacro = "1.1.0-alpha07"
 preference = "1.1.1"
+compose = "1.0.1"
+composeActivity="1.3.1"
 
 [libraries]
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
@@ -61,6 +63,13 @@ benchmark-macrox = { module = "androidx.benchmark:benchmark-macro", version.ref 
 benchmark-macro-junit4 = { module = "androidx.benchmark:benchmark-macro-junit4", version.ref = "benchmarkMacro" }
 preference-ktx = { module = "androidx.preference:preference-ktx", version.ref = "preference" }
 
+compose-ktx = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-tooling-ktx = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-activity-ktx = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
+compose-test-ktx = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
+compose-material-ktx = { module = "com.google.android.material:compose-theme-adapter", version.ref = "compose" }
+compose-ui-material = { module = "androidx.compose.material:material", version.ref = "compose" }
+
 [bundles]
 hilts = ["hilt-androidx", "hilt-compiler", "hilt-android-compiler", "hilt-android-testing", "hilt-work", "androidx-hilt-compiler"]
 benchmarks = ["benchmark-junit4", "benchmark-macrox", "benchmark-macro-junit4"]
@@ -69,3 +78,4 @@ tests = ["junit4", "junit-ext", "espresso-core", "core-testing", "mockk", "runne
 room = ["room-compiler", "room-ktx", "room-runtime"]
 navigation = ["navigation-fragment-ktx", "navigation-ui-ktx"]
 retrofits = ["retrofit", "converter-gson"]
+compose = ["compose-ktx", "compose-tooling-ktx", "compose-activity-ktx", "compose-test-ktx", "compose-material-ktx", "compose-ui-material"]

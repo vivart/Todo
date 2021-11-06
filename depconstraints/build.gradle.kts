@@ -14,6 +14,7 @@ dependencies {
         api(libs.handlebars)
         api(libs.work.runtime.ktx)
         api(libs.preference.ktx)
+        api(libs.bundles.compose)
 
         api(libs.bundles.hilts)
         api(libs.bundles.room)
