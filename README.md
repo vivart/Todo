@@ -1,5 +1,7 @@
 ![build](https://github.com/vivart/todo/actions/workflows/todo.yaml/badge.svg)
 
+[![codecov](https://codecov.io/gh/vivart/Todo/branch/master/graph/badge.svg?token=9K673XE18U)](https://codecov.io/gh/vivart/Todo)
+
 # Todo
 
 It's an experimental repo insipired from https://commonsware.com/AndExplore. I experiment all new
