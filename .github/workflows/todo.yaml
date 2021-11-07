@@ -1,4 +1,4 @@
-name: todo
+name: Build & test
 
 on:
   push:
@@ -22,10 +22,21 @@ jobs:
         with:
           java-version: 11
 
-      - name: Build project
+      - name: Generate cache key
+        run: ./checksum.sh checksum.txt
+
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ~/.gradle/caches/modules-*
+            ~/.gradle/caches/jars-*
+            ~/.gradle/caches/build-cache-*
+          key: gradle-${{ hashFiles('checksum.txt') }}
+
+      - name: Build
         run: ./gradlew check spotlessCheck assembleDebug --stacktrace
 
-      - name: Upload coverage to Codecov
+      - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v2
         with:
           files: ./app/build/reports/kover/testDebugUnitTest.xml
@@ -57,6 +68,17 @@ jobs:
         with:
           java-version: 11
 
+      - name: Generate cache key
+        run: ./checksum.sh checksum.txt
+
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ~/.gradle/caches/modules-*
+            ~/.gradle/caches/jars-*
+            ~/.gradle/caches/build-cache-*
+          key: gradle-${{ hashFiles('checksum.txt') }}
+
       - name: Run instrumentation tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -69,5 +91,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: test-reports
-          path: app/build/reports/
+          name: test-results-${{ matrix.api-level }}-${{ steps.determine-target.outputs.TARGET }}
+          path: |
+            **/build/reports/*
+            **/build/outputs/*/connected/*
